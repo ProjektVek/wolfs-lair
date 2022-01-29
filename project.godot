@@ -11,7 +11,31 @@ config_version=4
 [application]
 
 config/name="alkateia-testroom"
+run/main_scene="res://scenes/Language.tscn"
 config/icon="res://icon.png"
+
+[audio]
+
+default_bus_layout="res://assets/sound/sound_bus.tres"
+
+[autoload]
+
+configuration="*res://assets/scripts/config-file.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/size/resizable=false
+
+[gui]
+
+theme/custom_font="res://assets/fonts/RH.tres"
+
+[locale]
+
+locale_filter=[ 1, [ "en_US", "pt_BR" ] ]
+translations=PoolStringArray( "res://i18n/i18n.en_US.translation", "res://i18n/i18n.pt_BR.translation" )
 
 [physics]
 
@@ -19,4 +43,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 environment/default_environment="res://default_env.tres"

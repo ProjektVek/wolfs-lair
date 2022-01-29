@@ -1,0 +1,368 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/scripts/Main-Menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/scripts/Settings.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/RH.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/fonts/RH_I.tres" type="DynamicFont" id=4]
+[ext_resource path="res://assets/images/blur_material.tres" type="Material" id=5]
+[ext_resource path="res://assets/sound/sfx/ButtonClick.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/fonts/RedHatMono-VariableFont_wght.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 28
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 28
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[node name="Main-Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = -230.0
+margin_right = 393.0
+margin_bottom = -42.0
+size_flags_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="Menu"]
+margin_right = 343.0
+margin_bottom = 44.0
+hint_tooltip = "_play-hint"
+focus_mode = 0
+custom_fonts/font = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "_play"
+flat = true
+
+[node name="Practice" type="Button" parent="Menu"]
+margin_top = 48.0
+margin_right = 343.0
+margin_bottom = 92.0
+hint_tooltip = "_practice-hint"
+focus_mode = 0
+custom_fonts/font = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "_practice"
+flat = true
+
+[node name="Settings" type="Button" parent="Menu"]
+margin_top = 96.0
+margin_right = 343.0
+margin_bottom = 140.0
+hint_tooltip = "_settings-hint"
+focus_mode = 0
+custom_fonts/font = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "_settings"
+flat = true
+
+[node name="Exit" type="Button" parent="Menu"]
+margin_top = 144.0
+margin_right = 343.0
+margin_bottom = 188.0
+hint_tooltip = "_exit-hint"
+focus_mode = 0
+custom_fonts/font = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "_exit"
+flat = true
+
+[node name="Settings_Position" type="Node2D" parent="."]
+material = ExtResource( 5 )
+position = Vector2( 0, -720 )
+
+[node name="Animation" type="Tween" parent="Settings_Position"]
+
+[node name="Settings" type="Panel" parent="Settings_Position"]
+use_parent_material = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 490.0
+margin_right = 850.0
+margin_bottom = 720.0
+size_flags_vertical = 3
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Video" type="Label" parent="Settings_Position/Settings"]
+margin_left = 26.0
+margin_top = 29.0
+margin_right = 312.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 3 )
+text = "_video"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Resolution" type="Label" parent="Settings_Position/Settings"]
+margin_left = 26.0
+margin_top = 80.0
+margin_right = 312.0
+margin_bottom = 105.0
+custom_fonts/font = ExtResource( 4 )
+text = "_res"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Res_OB" type="OptionButton" parent="Settings_Position/Settings/Resolution"]
+margin_left = 21.0
+margin_top = 33.0
+margin_right = 281.0
+margin_bottom = 65.0
+custom_fonts/font = ExtResource( 4 )
+text = "1280x720"
+items = [ "1280x720", null, false, 0, null, "1920x1080", null, false, 1, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Fullscreen" type="Label" parent="Settings_Position/Settings"]
+margin_left = 26.0
+margin_top = 160.0
+margin_right = 321.0
+margin_bottom = 190.0
+custom_fonts/font = ExtResource( 4 )
+text = "_fullscreen"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="FS_CB" type="CheckButton" parent="Settings_Position/Settings/Fullscreen"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -76.0
+margin_top = -20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Audio" type="Label" parent="Settings_Position/Settings"]
+margin_left = 26.0
+margin_top = 217.0
+margin_right = 312.0
+margin_bottom = 265.0
+custom_fonts/font = ExtResource( 3 )
+text = "_audio"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Music" type="Label" parent="Settings_Position/Settings"]
+margin_left = 26.0
+margin_top = 269.0
+margin_right = 312.0
+margin_bottom = 300.0
+custom_fonts/font = ExtResource( 4 )
+text = "_music
+"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Music_HS" type="HSlider" parent="Settings_Position/Settings/Music"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -122.0
+margin_top = -16.0
+margin_right = 138.0
+min_value = -40.0
+max_value = 0.0
+step = 4.0
+value = -8.0
+rounded = true
+scrollable = false
+tick_count = 11
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="SFX" type="Label" parent="Settings_Position/Settings"]
+margin_left = 26.0
+margin_top = 333.0
+margin_right = 312.0
+margin_bottom = 386.0
+custom_fonts/font = ExtResource( 4 )
+text = "_sfx
+"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="SFX_HS" type="HSlider" parent="Settings_Position/Settings/SFX"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -122.0
+margin_top = -16.0
+margin_right = 138.0
+min_value = -40.0
+max_value = 0.0
+step = 4.0
+value = -8.0
+rounded = true
+scrollable = false
+tick_count = 11
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Mute" type="Label" parent="Settings_Position/Settings"]
+margin_left = 26.0
+margin_top = 397.0
+margin_right = 321.0
+margin_bottom = 427.0
+custom_fonts/font = ExtResource( 4 )
+text = "_mute"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="M_CB" type="CheckButton" parent="Settings_Position/Settings/Mute"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -76.0
+margin_top = -20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Language" type="Label" parent="Settings_Position/Settings"]
+margin_left = 26.0
+margin_top = 451.0
+margin_right = 312.0
+margin_bottom = 516.0
+custom_fonts/font = ExtResource( 3 )
+text = "_lang"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Lang_OB" type="OptionButton" parent="Settings_Position/Settings/Language"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -122.0
+margin_top = -20.0
+margin_right = 138.0
+margin_bottom = 12.0
+custom_fonts/font = ExtResource( 4 )
+text = "[en_US] English"
+items = [ "[en_US] English", null, false, 0, null, "[pt_BR] Português", null, false, 1, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Apply" type="Button" parent="Settings_Position/Settings"]
+use_parent_material = true
+anchor_bottom = 1.0
+margin_left = -490.0
+margin_right = -2.0
+hint_tooltip = "_apply-hint"
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Apply_Label" type="Label" parent="Settings_Position/Settings/Apply"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -75.0
+margin_top = 720.0
+margin_right = 645.0
+margin_bottom = 80.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_rotation = -89.9999
+rect_clip_content = true
+custom_fonts/font = SubResource( 1 )
+text = "_apply"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="Settings_Position/Settings"]
+use_parent_material = true
+anchor_left = 1.0
+anchor_right = 1.0
+margin_right = 430.0
+margin_bottom = 720.0
+hint_tooltip = "_back-hint"
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back_Label" type="Label" parent="Settings_Position/Settings/Back"]
+anchor_bottom = 0.996
+margin_top = 717.0
+margin_right = 720.0
+margin_bottom = 79.88
+grow_horizontal = 0
+rect_rotation = -90.0
+custom_fonts/font = SubResource( 2 )
+text = "_back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Button-Press" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+bus = "SFX"
+
+[connection signal="pressed" from="Menu/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Menu/Practice" to="." method="_on_Practice_pressed"]
+[connection signal="pressed" from="Menu/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="Menu/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="item_selected" from="Settings_Position/Settings/Resolution/Res_OB" to="Settings_Position/Settings" method="_on_Res_OB_item_selected"]
+[connection signal="toggled" from="Settings_Position/Settings/Fullscreen/FS_CB" to="Settings_Position/Settings" method="_on_FS_CB_toggled"]
+[connection signal="value_changed" from="Settings_Position/Settings/Music/Music_HS" to="Settings_Position/Settings" method="_on_Music_HS_value_changed"]
+[connection signal="value_changed" from="Settings_Position/Settings/SFX/SFX_HS" to="Settings_Position/Settings" method="_on_SFX_HS_value_changed"]
+[connection signal="toggled" from="Settings_Position/Settings/Mute/M_CB" to="Settings_Position/Settings" method="_on_M_CB_toggled"]
+[connection signal="item_selected" from="Settings_Position/Settings/Language/Lang_OB" to="Settings_Position/Settings" method="_on_Lang_OB_item_selected"]
+[connection signal="pressed" from="Settings_Position/Settings/Apply" to="Settings_Position/Settings" method="_on_Apply_pressed"]
+[connection signal="pressed" from="Settings_Position/Settings/Back" to="Settings_Position/Settings" method="_on_Back_pressed"]
