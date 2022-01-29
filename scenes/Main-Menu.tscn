@@ -1,0 +1,290 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/scripts/Main-Menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/scripts/Settings.gd" type="Script" id=2]
+
+[node name="Main-Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -144.0
+margin_right = 220.0
+margin_bottom = -24.0
+size_flags_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="Menu"]
+margin_right = 220.0
+margin_bottom = 20.0
+text = "_play"
+
+[node name="Settings" type="Button" parent="Menu"]
+margin_top = 24.0
+margin_right = 220.0
+margin_bottom = 44.0
+text = "_settings"
+
+[node name="Exit" type="Button" parent="Menu"]
+margin_top = 48.0
+margin_right = 220.0
+margin_bottom = 68.0
+text = "_exit"
+
+[node name="Position" type="Node2D" parent="."]
+position = Vector2( 0, -720 )
+
+[node name="Animation" type="Tween" parent="Position"]
+
+[node name="Settings" type="Panel" parent="Position"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 490.0
+margin_right = 850.0
+margin_bottom = 720.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Video" type="Label" parent="Position/Settings"]
+margin_left = 26.0
+margin_top = 29.0
+margin_right = 312.0
+margin_bottom = 60.0
+text = "_video
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resolution" type="Label" parent="Position/Settings"]
+margin_left = 26.0
+margin_top = 64.0
+margin_right = 312.0
+margin_bottom = 112.0
+text = "_res
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Res_OB" type="OptionButton" parent="Position/Settings/Resolution"]
+margin_top = 18.0
+margin_right = 286.0
+margin_bottom = 38.0
+text = "1280x720"
+items = [ "1280x720", null, false, 0, null, "1920x1080", null, false, 1, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fullscreen" type="Label" parent="Position/Settings"]
+margin_left = 26.0
+margin_top = 116.0
+margin_right = 312.0
+margin_bottom = 147.0
+text = "_fullscreen
+"
+
+[node name="FS_CB" type="CheckButton" parent="Position/Settings/Fullscreen"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -76.0
+margin_top = -20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Audio" type="Label" parent="Position/Settings"]
+margin_left = 26.0
+margin_top = 151.0
+margin_right = 312.0
+margin_bottom = 199.0
+text = "
+_audio
+"
+
+[node name="Music" type="Label" parent="Position/Settings"]
+margin_left = 26.0
+margin_top = 203.0
+margin_right = 312.0
+margin_bottom = 234.0
+text = "_music
+"
+
+[node name="Music_HS" type="HSlider" parent="Position/Settings/Music"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -143.0
+margin_top = -16.0
+margin_right = 143.0
+min_value = -40.0
+max_value = 0.0
+step = 4.0
+value = -8.0
+rounded = true
+scrollable = false
+tick_count = 11
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SFX" type="Label" parent="Position/Settings"]
+margin_left = 26.0
+margin_top = 238.0
+margin_right = 312.0
+margin_bottom = 269.0
+text = "_sfx
+"
+
+[node name="SFX_HS" type="HSlider" parent="Position/Settings/SFX"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -143.0
+margin_top = -16.0
+margin_right = 143.0
+min_value = -40.0
+max_value = 0.0
+step = 4.0
+value = -8.0
+rounded = true
+scrollable = false
+tick_count = 11
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mute" type="Label" parent="Position/Settings"]
+margin_left = 26.0
+margin_top = 273.0
+margin_right = 312.0
+margin_bottom = 304.0
+text = "_mute
+"
+
+[node name="M_CB" type="CheckButton" parent="Position/Settings/Mute"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -76.0
+margin_top = -20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Language" type="Label" parent="Position/Settings"]
+margin_left = 26.0
+margin_top = 308.0
+margin_right = 312.0
+margin_bottom = 373.0
+text = "
+_lang
+
+"
+
+[node name="Lang_OB" type="OptionButton" parent="Position/Settings/Language"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -143.0
+margin_top = -20.0
+margin_right = 143.0
+text = "[en_US] English"
+items = [ "[en_US] English", null, false, 0, null, "[pt_BR] Português", null, false, 1, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Apply" type="Button" parent="Position/Settings"]
+anchor_bottom = 1.0
+margin_left = -162.0
+margin_right = -2.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Apply_Label" type="Label" parent="Position/Settings/Apply"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -3.05176e-05
+margin_top = 717.0
+margin_right = 560.0
+margin_bottom = 157.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_rotation = -90.0
+text = "_apply"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="Position/Settings"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 3.05176e-05
+margin_right = 160.0
+margin_bottom = 720.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back_Label" type="Label" parent="Position/Settings/Back"]
+anchor_right = 1.0
+anchor_bottom = 0.996
+margin_top = 717.0
+margin_right = 560.0
+margin_bottom = 159.88
+grow_horizontal = 0
+rect_rotation = -90.0
+text = "_back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Blur" type="Sprite" parent="."]
+position = Vector2( -480, 82 )
+offset = Vector2( 480, -82 )
+
+[connection signal="pressed" from="Menu/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Menu/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="Menu/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="item_selected" from="Position/Settings/Resolution/Res_OB" to="Position/Settings" method="_on_Res_OB_item_selected"]
+[connection signal="toggled" from="Position/Settings/Fullscreen/FS_CB" to="Position/Settings" method="_on_FS_CB_toggled"]
+[connection signal="value_changed" from="Position/Settings/Music/Music_HS" to="Position/Settings" method="_on_Music_HS_value_changed"]
+[connection signal="value_changed" from="Position/Settings/SFX/SFX_HS" to="Position/Settings" method="_on_SFX_HS_value_changed"]
+[connection signal="toggled" from="Position/Settings/Mute/M_CB" to="Position/Settings" method="_on_M_CB_toggled"]
+[connection signal="item_selected" from="Position/Settings/Language/Lang_OB" to="Position/Settings" method="_on_Lang_OB_item_selected"]
+[connection signal="pressed" from="Position/Settings/Apply" to="Position/Settings" method="_on_Apply_pressed"]
+[connection signal="pressed" from="Position/Settings/Back" to="Position/Settings" method="_on_Back_pressed"]
