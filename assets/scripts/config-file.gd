@@ -25,7 +25,7 @@ var Settings = {
 		"SOUND_EFFECTS": -12 
 	},
 	"LANG": { 
-		"LOCALE": "en_US"  
+		"LOCALE": OS.get_locale_language()  
 	} 
 } 
 
@@ -93,7 +93,3 @@ func update_Lang(local):
 	Settings.LANG.LOCALE = local 
 	_save_Settings() 
 
-
-# chamar essa funcao para retornar o idioma selecionado 
-func get_Lang(): 
-	return Settings.LANG.LOCALE 

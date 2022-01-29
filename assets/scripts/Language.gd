@@ -1,17 +1,19 @@
 extends Control
 
-var lang_ID = configuration.get_Lang()
+var lang_ID
 
 # executada assim que a tela carrega 
 func _ready(): 
 	var opt_menu = get_node("Lang-Options") 
 
-	if lang_ID == 'en_US': 
-		opt_menu.select(0) 
-	if lang_ID == 'pt_BR': 
-		opt_menu.select(1) 
+	if configuration.Settings.LANG.LOCALE == 'en_US': 
+		opt_menu.select(0)
+		lang_ID = 'en_US'
+	elif configuration.Settings.LANG.LOCALE == 'pt_BR': 
+		opt_menu.select(1)
+		lang_ID = 'pt_BR'
 
-	TranslationServer.set_locale(lang_ID) 
+	TranslationServer.set_locale(lang_ID)
 
 
 # Recupera o valor de language_id e salva em no config-file local. 
