@@ -12,11 +12,7 @@ var list = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	self.pair_value = load_equation()
-	random_numbers()
-	fill_equation_label()
-	fill_side_group() 
-	generate_new_ordened_list()
+	reset_to_new()
 	pass # Replace with function body.
 
 
@@ -77,3 +73,13 @@ func generate_new_ordened_list(old_list = random_numbers()):
 	print('Nova Lista: ' , new_list)
 	list = new_list
 	return new_list
+
+func reset_to_new():
+	self.pair_value = load_equation()
+	random_numbers()
+	fill_equation_label()
+	fill_side_group() 
+	generate_new_ordened_list()
+	pass
+
+func

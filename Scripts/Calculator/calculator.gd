@@ -9,11 +9,8 @@ extends "res://Scripts/Calculator/Equation.gd"
 func _ready():
 	pass # Replace with function body.
 	
-func new_operation(operation = '+',
- 	# script = "res://Scripts/Calculator/Equation.gd"):
-	# var equation = Equation()
-	# print('print: ', equation.generate_sum())
-	# equation.get_numbers_printed()
+func new_operation():
+	$LeftEquation.reset_to_new()
 	pass
 
 
