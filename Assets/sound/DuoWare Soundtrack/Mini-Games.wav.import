@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Mini-Games.wav-057a14b355f8433091c66e7283979ccc.sample"
+
+[deps]
+
+source_file="res://Assets/sound/DuoWare Soundtrack/Mini-Games.wav"
+dest_files=[ "res://.import/Mini-Games.wav-057a14b355f8433091c66e7283979ccc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

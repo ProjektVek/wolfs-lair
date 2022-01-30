@@ -7,12 +7,17 @@ extends Node
 
 var number_1 = -1
 var number_2 = -2
+var player_1_score = 0
+var player_2_score = 0
+var win_score = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 func _init():
+	player_1_score = 0
+	player_2_score = 0
 	pass
 
 func randomize_numbers():
@@ -67,6 +72,15 @@ func generator_random_list(number = 9):
 		else:
 			list.append(random_number)
 	return list
+	
+func hit_correct(equation, player_num):
+	if player_num == 1:
+		player_1_score += 1
+	else:
+		player_2_score += 1
+	equation.reset_to_new()
+	pass
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
