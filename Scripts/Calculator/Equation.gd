@@ -55,6 +55,20 @@ func get_number_1():
 
 func get_number_2():
 	return number_2
+	
+func generator_random_list(number = 9):
+	var list = []
+	for i in range(number):
+		var rng = RandomNumberGenerator.new()
+		rng.randomize()
+		var random_number = rng.randi_range(1,number)
+		if random_number in list:
+			while random_number in list:
+				random_number = rng.randi_range(1,number)
+			list.append(random_number)
+		else:
+			list.append(random_number)
+	return list
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
