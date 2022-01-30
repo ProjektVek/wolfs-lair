@@ -10,12 +10,9 @@ var number_2 = -2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	number_1 = -1
-	number_2 = -2
 	pass # Replace with function body.
 
 func _init():
-	# randomize_numbers()
 	pass
 
 func randomize_numbers():
@@ -26,17 +23,18 @@ func randomize_numbers():
 	number_1 = number_1 % 51
 	number_2 = rng.randi_range(1,50)
 	
-	print('log: Números Randomizados... ', number_1, ' e ', number_2)
-	pass
+	var message = str('log: Números Randomizados... ', number_1, ' e ', number_2)
+	print(message)
+	
+	var pair_value = [number_1, number_2]
+	return pair_value
 
 func generate_sum():
-	randomize_numbers()
 	var sum = number_1 + number_2
 	print('log: Soma Gerada: ', sum)
 	return sum
 
 func generate_subtraction():
-	randomize_numbers()
 	var subtraction = number_1 - number_2
 	return subtraction
 
