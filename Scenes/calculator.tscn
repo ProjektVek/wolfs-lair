@@ -1,33 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/LabelEquation.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Calculator/Equation.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Fonts/connection_ii/ConnectionII.otf" type="DynamicFontData" id=3]
-
-[sub_resource type="DynamicFont" id=1]
-size = 80
-outline_size = 2
-outline_color = Color( 0.215686, 0.862745, 0.0588235, 1 )
+[ext_resource path="res://Assets/Fonts/poco/Poco.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=2]
-size = 60
+size = 100
 font_data = ExtResource( 3 )
 
 [node name="Calculator" type="Node2D"]
 script = ExtResource( 2 )
-
-[node name="right equation" type="Label" parent="."]
-margin_left = 93.0
-margin_top = 69.0
-margin_right = 133.0
-margin_bottom = 100.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "42
-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Control" type="Control" parent="."]
 margin_right = 40.0
@@ -37,86 +19,196 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
-margin_top = 2.0
-margin_right = 514.0
-margin_bottom = 595.0
+margin_left = 3.0
+margin_top = 1.0
+margin_right = 644.0
+margin_bottom = 718.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ColorRect2" type="ColorRect" parent="Control"]
-margin_left = 518.0
-margin_top = 2.0
-margin_right = 1024.0
-margin_bottom = 598.0
+margin_left = 645.0
+margin_top = -5.0
+margin_right = 1285.0
+margin_bottom = 720.0
 color = Color( 0.027451, 0.027451, 0.027451, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ButtonAnswer" type="Button" parent="."]
-margin_left = 62.0
-margin_top = 176.0
-margin_right = 173.0
-margin_bottom = 248.0
+[node name="ButtonAnswer" type="Button" parent="." groups=["left_calc"]]
+margin_left = 141.0
+margin_top = 177.0
+margin_right = 252.0
+margin_bottom = 249.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ButtonAnswer3" type="Button" parent="."]
-margin_left = 327.0
+[node name="ButtonAnswer3" type="Button" parent="." groups=["left_calc"]]
+margin_left = 406.0
+margin_top = 180.0
+margin_right = 517.0
+margin_bottom = 252.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonAnswer2" type="Button" parent="." groups=["lef_calc"]]
+margin_left = 274.0
 margin_top = 179.0
-margin_right = 438.0
+margin_right = 385.0
 margin_bottom = 251.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ButtonAnswer2" type="Button" parent="."]
-margin_left = 195.0
-margin_top = 178.0
-margin_right = 306.0
-margin_bottom = 250.0
+[node name="ButtonAnswer7" type="Button" parent="." groups=["left_calc"]]
+margin_left = 140.0
+margin_top = 288.0
+margin_right = 251.0
+margin_bottom = 360.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonAnswer8" type="Button" parent="." groups=["left_calc"]]
+margin_left = 405.0
+margin_top = 291.0
+margin_right = 516.0
+margin_bottom = 363.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonAnswer9" type="Button" parent="." groups=["left_calc"]]
+margin_left = 273.0
+margin_top = 290.0
+margin_right = 384.0
+margin_bottom = 362.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonAnswer10" type="Button" parent="." groups=["left_calc"]]
+margin_left = 141.0
+margin_top = 396.0
+margin_right = 252.0
+margin_bottom = 468.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonAnswer11" type="Button" parent="." groups=["left_calc"]]
+margin_left = 406.0
+margin_top = 399.0
+margin_right = 517.0
+margin_bottom = 471.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonAnswer12" type="Button" parent="." groups=["left_calc"]]
+margin_left = 274.0
+margin_top = 398.0
+margin_right = 385.0
+margin_bottom = 470.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ButtonAnswer4" type="Button" parent="."]
-margin_left = 583.0
-margin_top = 230.0
-margin_right = 694.0
-margin_bottom = 302.0
+margin_left = 788.0
+margin_top = 181.0
+margin_right = 899.0
+margin_bottom = 253.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ButtonAnswer5" type="Button" parent="."]
-margin_left = 847.0
-margin_top = 231.0
-margin_right = 958.0
-margin_bottom = 303.0
+margin_left = 1052.0
+margin_top = 182.0
+margin_right = 1163.0
+margin_bottom = 254.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ButtonAnswer6" type="Button" parent="."]
-margin_left = 716.0
-margin_top = 231.0
-margin_right = 827.0
-margin_bottom = 303.0
+margin_left = 921.0
+margin_top = 182.0
+margin_right = 1032.0
+margin_bottom = 254.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LeftEquation" type="Label" parent="ButtonAnswer6"]
-margin_left = -564.0
-margin_top = -159.0
-margin_right = -68.0
-margin_bottom = 4.0
+[node name="ButtonAnswer13" type="Button" parent="."]
+margin_left = 787.0
+margin_top = 286.0
+margin_right = 898.0
+margin_bottom = 358.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonAnswer14" type="Button" parent="."]
+margin_left = 1051.0
+margin_top = 287.0
+margin_right = 1162.0
+margin_bottom = 359.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonAnswer15" type="Button" parent="."]
+margin_left = 920.0
+margin_top = 287.0
+margin_right = 1031.0
+margin_bottom = 359.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonAnswer16" type="Button" parent="."]
+margin_left = 788.0
+margin_top = 388.0
+margin_right = 899.0
+margin_bottom = 460.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonAnswer17" type="Button" parent="."]
+margin_left = 1052.0
+margin_top = 389.0
+margin_right = 1163.0
+margin_bottom = 461.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonAnswer18" type="Button" parent="."]
+margin_left = 921.0
+margin_top = 389.0
+margin_right = 1032.0
+margin_bottom = 461.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftEquation" type="Label" parent="."]
+margin_left = 173.0
+margin_top = 19.0
+margin_right = 493.0
+margin_bottom = 262.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "42 + 13
 "
+align = 1
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
